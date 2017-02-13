@@ -9,6 +9,9 @@ namespace UnityStandardAssets._2D
     {
         private PlatformerCharacter2D m_Character;
         private bool m_Jump;
+        public GameObject shot;
+        public Transform shotSpawn;
+        public static int k=0; 
 
 
         private void Awake()
@@ -19,6 +22,17 @@ namespace UnityStandardAssets._2D
 
         private void Update()
         {
+
+            if (Input.GetKeyUp(KeyCode.Mouse0)){
+                k++;
+                Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+                if (k % 2 == 0)
+                {
+                    Destroy(GameObject.FindWithTag("Blue"));
+                }
+                else { Destroy(GameObject.FindWithTag("Orange"));
+                }
+            }
             if (!m_Jump)
             {
                 // Read the jump input in Update so button presses aren't missed.
