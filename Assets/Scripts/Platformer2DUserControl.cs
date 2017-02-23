@@ -24,7 +24,9 @@ namespace UnityStandardAssets._2D
         {
 
             if (Input.GetKeyUp(KeyCode.Mouse0)){
+
                 k++;
+         
                 Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
                 if (k % 2 == 0)
                 {

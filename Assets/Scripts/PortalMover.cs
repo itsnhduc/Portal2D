@@ -37,16 +37,13 @@ public class PortalMover : MonoBehaviour {
                 PortalLocation(Orange_portal_pos, this, other);
             }
             if (this.transform.CompareTag("Orange")){
-                Debug.Log("Tuk sum");
                 PortalLocation(Blue_portal_pos, this, other);
-                Debug.Log(Blue_portal_pos);
             }
         } }
     void PortalLocation(string t, PortalMover here, Collision2D other) {
         switch (t)
         {
             case "LeftWall":
-                Debug.Log("Eto mee");
                 ThroughPortal(0.7F, 0, here, other);
                 break;
             case "RightWall":
