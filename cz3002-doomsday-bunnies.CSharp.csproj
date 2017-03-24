@@ -143,12 +143,12 @@
     <Compile Include="Assets\Scripts\EndGame.cs" />
     <Compile Include="Assets\Scripts\FunnelPusher.cs" />
     <Compile Include="Assets\Scripts\LightExtender.cs" />
+    <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\Mover.cs" />
     <Compile Include="Assets\Scripts\Platformer2DUserControl.cs" />
     <Compile Include="Assets\Scripts\PlatformerCharacter2D.cs" />
     <Compile Include="Assets\Scripts\PortalMover.cs" />
     <Compile Include="Assets\Scripts\PortalOpener.cs" />
-    <Compile Include="Assets\Scripts\MenuController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Libraries\Standard Assets\Cameras\CameraGuidelines.txt" />
