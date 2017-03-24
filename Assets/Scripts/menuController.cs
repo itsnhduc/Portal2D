@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class menuController : MonoBehaviour {
+public class MenuController : MonoBehaviour {
 
     
     void Start () {

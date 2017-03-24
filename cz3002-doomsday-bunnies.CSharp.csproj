@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.2f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -136,6 +138,7 @@
     <Compile Include="Assets\Libraries\Standard Assets\Utility\TimedObjectDestructor.cs" />
     <Compile Include="Assets\Libraries\Standard Assets\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\Libraries\Standard Assets\Utility\WaypointProgressTracker.cs" />
+    <Compile Include="Assets\Scripts\BackendAdapter.cs" />
     <Compile Include="Assets\Scripts\CursorTracker.cs" />
     <Compile Include="Assets\Scripts\EndGame.cs" />
     <Compile Include="Assets\Scripts\FunnelPusher.cs" />
@@ -145,7 +148,7 @@
     <Compile Include="Assets\Scripts\PlatformerCharacter2D.cs" />
     <Compile Include="Assets\Scripts\PortalMover.cs" />
     <Compile Include="Assets\Scripts\PortalOpener.cs" />
-    <Compile Include="Assets\Scripts\menuController.cs" />
+    <Compile Include="Assets\Scripts\MenuController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Libraries\Standard Assets\Cameras\CameraGuidelines.txt" />
