@@ -8,6 +8,7 @@ public class BackendAdapter : MonoBehaviour
 {
 
     public const string GET_ENDPOINT = @"http://localhost:3000/api/entries";
+    public const string POST_ENDPOINT = GET_ENDPOINT + "/addentry?";
 
     IEnumerator Start()
     {
@@ -40,9 +41,11 @@ public class BackendAdapter : MonoBehaviour
         GameObject.Find("NumColumn").GetComponent<Text>().text = numCol;
         GameObject.Find("NameColumn").GetComponent<Text>().text = nameCol;
         GameObject.Find("ScoreColumn").GetComponent<Text>().text = scoreCol;
+                
     }
 
-    IEnumerator Update(string name, int score)
+    // Example call: StartCoroutine(UpdateDB("ASBF", 371));
+    IEnumerator UpdateDB(string name, int score)
     {
         // Supply it with a string representing the players name and the players score.
         string post_url = POST_ENDPOINT + "name=" + WWW.EscapeURL(name) + "&score=" + score;
