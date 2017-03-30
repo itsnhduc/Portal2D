@@ -21,8 +21,8 @@ public class BackendAdapter : MonoBehaviour
         var sortedData = new List<Response.Model>(json.data);
         sortedData.Sort((p1, p2) =>
         {
-            if (p1.score < p2.score) return 1;
-            else if (p1.score > p2.score) return -1;
+            if (p1.score > p2.score) return 1;
+            else if (p1.score < p2.score) return -1;
             else return 0;
         });
 
