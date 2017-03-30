@@ -5,14 +5,12 @@ using UnityEngine.UI;
 
 public class UsernameInput : MonoBehaviour {
 
-    public InputField input;
-    private bool allowEnter;
-    public Canvas canvas;
-    private SaveScores ss = new SaveScores();
+    private InputField input;
+	private bool allowEnter=false;
+	private BackendAdapter ss = new BackendAdapter();
     void Start()
     {        
         input = gameObject.GetComponent<InputField>();
-        canvas = gameObject.GetComponent<Canvas>();
        
     }
 
@@ -21,7 +19,7 @@ public class UsernameInput : MonoBehaviour {
         {
             //DoSomething
             Debug.Log("Update Scores");
-            StartCoroutine(ss.PostScores(input.text, UnityStandardAssets._2D.Platformer2DUserControl.k));
+			StartCoroutine(ss.UpdateDB(input.text, UnityStandardAssets._2D.Platformer2DUserControl.k));
             input.text = "";
             allowEnter=false;
         }

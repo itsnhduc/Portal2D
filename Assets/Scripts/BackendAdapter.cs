@@ -45,7 +45,7 @@ public class BackendAdapter : MonoBehaviour
     }
 
     // Example call: StartCoroutine(UpdateDB("ASBF", 371));
-    IEnumerator UpdateDB(string name, int score)
+    public IEnumerator UpdateDB(string name, int score)
     {
         // Supply it with a string representing the players name and the players score.
         string post_url = POST_ENDPOINT + "name=" + WWW.EscapeURL(name) + "&score=" + score;
