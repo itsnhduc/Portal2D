@@ -23,16 +23,16 @@ namespace UnityStandardAssets._2D
         private void Update()
         {
 
-            if (Input.GetKeyUp(KeyCode.Mouse0)){
+            if (Input.GetKeyUp(KeyCode.Mouse0)) {
 
-                k++;
-         
-                Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-                if (k % 2 == 0)
-                {
-                    Destroy(GameObject.FindWithTag("Blue"));
-                }
-                else { Destroy(GameObject.FindWithTag("Orange"));
+                if (BoxController.hit.collider == null /*&& BoxController.hit.transform.tag == "Crate"*/) { k++;
+                    Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+                    if (k % 2 == 0)
+                    {
+                        Destroy(GameObject.FindWithTag("Blue"));
+                    }
+                    else { Destroy(GameObject.FindWithTag("Orange"));
+                    }
                 }
             }
             if (!m_Jump)

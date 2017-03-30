@@ -21,7 +21,6 @@ public class EndGame : MonoBehaviour {
 		
 	}
     void OnCollisionEnter2D(Collision2D coll) {
-        Debug.Log(coll.transform.tag);
         if (coll.transform.tag == "Player") {
             endGame.text = "Level Complete. Portals used:" + UnityStandardAssets._2D.Platformer2DUserControl.k;
             nextLevel.interactable = true;

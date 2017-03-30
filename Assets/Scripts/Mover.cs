@@ -20,13 +20,8 @@ public class Mover : MonoBehaviour {
         if ( dir.y > 0)
         {
             rb.rotation = j;
-            Debug.Log("Tuk");
-            Debug.Log(j);
         }
         else { rb.rotation=360-j;
-            Debug.Log("Tam");
-            Debug.Log(dir.z);
-            Debug.Log(j);
         }
            
     }

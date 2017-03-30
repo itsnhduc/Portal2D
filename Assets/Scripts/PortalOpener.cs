@@ -40,7 +40,7 @@ public class PortalOpener : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-        if (coll.transform.name.Contains("Edge"))
+        if (coll.transform.name.Contains("Edge") || coll.transform.name.Contains("Corner"))
         {
             Debug.Log(coll.transform.name);
             switch (coll.transform.tag)
