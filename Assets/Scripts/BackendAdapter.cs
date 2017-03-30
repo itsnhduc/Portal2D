@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +8,7 @@ public class BackendAdapter : MonoBehaviour
 {
 
     public const string GET_ENDPOINT = @"http://localhost:3000/api/entries";
+    public const string POST_ENDPOINT = GET_ENDPOINT + "/addentry?";
 
     IEnumerator Start()
     {
@@ -40,12 +41,56 @@ public class BackendAdapter : MonoBehaviour
         GameObject.Find("NumColumn").GetComponent<Text>().text = numCol;
         GameObject.Find("NameColumn").GetComponent<Text>().text = nameCol;
         GameObject.Find("ScoreColumn").GetComponent<Text>().text = scoreCol;
+                
     }
 
-    void Update()
+    // Example call: StartCoroutine(UpdateDB("ASBF", 371));
+    IEnumerator UpdateDB(string name, int score)
     {
+        // Supply it with a string representing the players name and the players score.
+        string post_url = POST_ENDPOINT + "name=" + WWW.EscapeURL(name) + "&score=" + score;
+
+        // Post the URL to the site and create a download object to get the result.
+        WWW hs_post = new WWW(post_url);
+        yield return hs_post; // Wait until the download is done
+
+        if (hs_post.error != null)
+        {
+            print("There was an error posting the high score: " + hs_post.error);
+        }
+        else
+        {
+            print("response:" + hs_post.text);
+        }
 
     }
+
+//IEnumerator Update(string name, int score)
+    //{
+
+    //    // Create a form object for sending high score data to the server
+    //    WWWForm form = new WWWForm();
+    //    // The name of the player submitting the scores
+    //    form.AddField("name", name);
+    //    // The score
+    //    form.AddField("score", score);
+
+    //    // Create a download object
+    //    WWW download = new WWW(GET_ENDPOINT, form);
+
+    //    // Wait until the download is done
+    //    yield return download;
+
+    //    if (!string.IsNullOrEmpty(download.error))
+    //    {
+    //        print("Error downloading: " + download.error);
+    //    }
+    //    else
+    //    {
+    //        // show the highscores
+    //        Debug.Log(download.text);
+    //    }
+    //}
 }
 
 [Serializable]
