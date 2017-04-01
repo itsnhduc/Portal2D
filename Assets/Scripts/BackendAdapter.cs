@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class BackendAdapter : MonoBehaviour
 {
-
+    public static bool scoresUpdated = false;
     public const string GET_ENDPOINT = @"http://localhost:3000/api/entries";
     public const string POST_ENDPOINT = GET_ENDPOINT + "/addentry?";
 
@@ -61,6 +61,7 @@ public class BackendAdapter : MonoBehaviour
         else
         {
             print("response:" + hs_post.text);
+            scoresUpdated = true;
         }
 
     }

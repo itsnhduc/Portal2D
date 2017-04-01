@@ -23,25 +23,36 @@ namespace UnityStandardAssets._2D
         private void Update()
         {
 
-            if (Input.GetKeyUp(KeyCode.Mouse0)) {
+            if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
 
-                if (BoxController.hit.collider == null /*&& BoxController.hit.transform.tag == "Crate"*/) { k++;
+                if (BoxController.grabbed == false && BoxController.hit.collider == null)
+                {
+                    k++;
                     Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
                     if (k % 2 == 0)
                     {
                         Destroy(GameObject.FindWithTag("Blue"));
                     }
-                    else { Destroy(GameObject.FindWithTag("Orange"));
+                    else
+                    {
+                        Destroy(GameObject.FindWithTag("Orange"));
                     }
                 }
+                else
+                {
+                    Debug.Log(BoxController.hit.collider);
+                    Debug.Log(BoxController.hit.transform.tag);
+                }
+
             }
             if (!m_Jump)
             {
                 // Read the jump input in Update so button presses aren't missed.
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
-        }
 
+        }
 
         private void FixedUpdate()
         {
