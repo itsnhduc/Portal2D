@@ -28,7 +28,6 @@ public class UsernameInput : MonoBehaviour {
         else { allowEnter = input.isFocused; }
         if (BackendAdapter.scoresUpdated == true)
         {
-            Debug.Log("We did it");
             submitedScore.enabled = true;
         }
     }
