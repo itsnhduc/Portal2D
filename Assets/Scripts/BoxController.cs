@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoxController : MonoBehaviour {
 
-    public bool grabbed;
+    public static bool grabbed;
     public static RaycastHit2D hit;
     public float distance = 2f;
     public Transform holdPoint;

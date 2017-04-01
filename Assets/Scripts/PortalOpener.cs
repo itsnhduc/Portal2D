@@ -30,7 +30,7 @@ public class PortalOpener : MonoBehaviour {
             //    .GetComponent<LightExtender>()
             //    .process(coll.transform.position, true, coll.gameObject);
         }
-        GameObject.Find("LightExtender").GetComponent<LightExtender>().process();
+       // GameObject.Find("LightExtender").GetComponent<LightExtender>().process();
 
     }
 
