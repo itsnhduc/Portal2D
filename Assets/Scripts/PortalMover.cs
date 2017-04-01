@@ -32,7 +32,7 @@ public class PortalMover : MonoBehaviour {
     }
     public static int t; 
     void OnCollisionEnter2D(Collision2D other) {
-        if (other.transform.tag == "Player") {
+        if (other.transform.tag == "Player" || other.transform.tag == "Crate") {
             if (this.transform.CompareTag("Blue")) {
                 PortalLocation(Orange_portal_pos, this, other);
             }
