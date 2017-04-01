@@ -81,8 +81,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ChangeSprite.cs" />
-    <Compile Include="Assets\GameOverText.cs" />
     <Compile Include="Assets\Libraries\Standard Assets\2D\Scripts\Camera2DFollow.cs" />
     <Compile Include="Assets\Libraries\Standard Assets\2D\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Libraries\Standard Assets\2D\Scripts\Restarter.cs" />
@@ -138,12 +136,13 @@
     <Compile Include="Assets\Libraries\Standard Assets\Utility\TimedObjectDestructor.cs" />
     <Compile Include="Assets\Libraries\Standard Assets\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\Libraries\Standard Assets\Utility\WaypointProgressTracker.cs" />
-    <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\BackendAdapter.cs" />
     <Compile Include="Assets\Scripts\BoxController.cs" />
+    <Compile Include="Assets\Scripts\ChangeSprite.cs" />
     <Compile Include="Assets\Scripts\CursorTracker.cs" />
     <Compile Include="Assets\Scripts\EndGame.cs" />
     <Compile Include="Assets\Scripts\FunnelPusher.cs" />
+    <Compile Include="Assets\Scripts\GameOverText.cs" />
     <Compile Include="Assets\Scripts\LightExtender.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\Mover.cs" />
@@ -152,9 +151,8 @@
     <Compile Include="Assets\Scripts\PlatformerCharacter2D.cs" />
     <Compile Include="Assets\Scripts\PortalMover.cs" />
     <Compile Include="Assets\Scripts\PortalOpener.cs" />
+    <Compile Include="Assets\Scripts\ToGameOverScene.cs" />
     <Compile Include="Assets\Scripts\UsernameInput.cs" />
-    <Compile Include="Assets\ToGameOverScene.cs" />
-    <Compile Include="Assets\UploadScores.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Libraries\Standard Assets\Cameras\CameraGuidelines.txt" />

@@ -9,6 +9,7 @@ public class OpenEndButton : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        print("Deactivating end level");
         endLevel.SetActive(false);
 	}
 	
