@@ -29,7 +29,7 @@ public class BackendAdapter : MonoBehaviour
         // display player data
         string numCol = "" + Environment.NewLine;
         string nameCol = "Name" + Environment.NewLine;
-        string scoreCol = "Score" + Environment.NewLine;
+        string scoreCol = "Portal Count" + Environment.NewLine;
         int num = 0;
         sortedData.ForEach(player =>
         {

@@ -2,20 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenEndButton : MonoBehaviour {
+public class OpenEndButton : MonoBehaviour
+{
 
-    public static int l=2;
+    public static int l = 2;
     public GameObject endLevel;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         print("Deactivating end level");
         endLevel.SetActive(false);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+    }
 
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -24,10 +27,13 @@ public class OpenEndButton : MonoBehaviour {
         {
             endLevel.SetActive(true);
             l = 0;
+            GameObject.Find("Button_9").GetComponent<SpriteRenderer>().enabled = false;
         }
     }
-    void OnCollisionExit2D(Collision2D col) {
-       endLevel.SetActive(false);
-            l = 2;
+    void OnCollisionExit2D(Collision2D col)
+    {
+        endLevel.SetActive(false);
+        l = 2;
+        GameObject.Find("Button_9").GetComponent<SpriteRenderer>().enabled = true;
     }
-    }
+}
